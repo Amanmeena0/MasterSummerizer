@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AI Summarizer</title>
-  <link rel="stylesheet" href="popup.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Summarizer</title>
+  <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
+  <main class="card">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <header class="header">
+      <p class="eyebrow">Browser Assistant</p>
+      <h1>Master Summarizer</h1>
+      <p class="subtitle">Select text on any page and get a clean summary in seconds.</p>
+    </header>
 
-  <h2>AI Summarizer</h2>
+    <button id="summarizeBtn" class="primary-btn">Summarize Selected Text</button>
 
-  <button id="summarizeBtn">Summarize Selected Text</button>
-
-  <p id="output"></p>
+    <section class="result-wrap" aria-live="polite">
+      <p id="status" class="status">Ready</p>
+      <p id="output" class="output">Your summary will appear here.</p>
+    </section>
+  </main>
 
   <script src="popup.js"></script>
 </body>
