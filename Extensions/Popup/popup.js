@@ -1,25 +1,7 @@
-const summarizeBtn = document.getElementById("summarizeBtn");
+const button = document.getElementById("summarizeBtn");
 const output = document.getElementById("output");
 
-const saveTokenBtn = document.getElementById("saveToken");
-const tokenInput = document.getElementById("tokenInput");
-
-// Save API Token
-saveTokenBtn.addEventListener("click", () => {
-  const token = tokenInput.value.trim();
-
-  if (!token) {
-    alert("Enter a valid token");
-    return;
-  }
-
-  chrome.storage.local.set({ token }, () => {
-    alert("Token saved successfully");
-  });
-});
-
-// Summarize button click
-summarizeBtn.addEventListener("click", async () => {
+button.addEventListener("click", async () => {
   output.innerText = "⏳ Getting selected text...";
 
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });

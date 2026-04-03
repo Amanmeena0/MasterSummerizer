@@ -1,10 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Master Summarizer",
-  "version": "1.0",
-  "description": "Summarize selected text using AI",
-  "permissions": ["scripting", "activeTab", "storage"],
-  "host_permissions": ["https://api-inference.huggingface.co/*"],
+  "name": "Master summarizer",
+  "version": "2.0",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["http://localhost:3000/*"],
+  "icons": {
+    "128" : "sav-file.png"
+  },
   "background": {
     "service_worker": "background/service-worker.js"
   },
